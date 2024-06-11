@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
-    "start": "concurrently \"npm run server\" ",
-    "vercel-build": "npm install pg"
+    "start": "concurrently \"npm run server\" "
   },
   "keywords": [],
   "author": "Oswaldo Palacios",
