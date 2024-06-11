@@ -7,6 +7,7 @@ const userAdmin = require("./src/utilities/userAdmin.js")
 //? Constantes
 
 const PORT = process.env.PORT || 3001; // Elige el puerto definido en las variables de entorno o el puerto 3001 por defecto
+console.log("PORT" + PORT);
 
 //? Función para iniciar el servidor
 
