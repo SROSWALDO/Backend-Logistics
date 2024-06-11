@@ -10,8 +10,8 @@ const UsuarioModel = require("./models/Usuario");
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 
 const sequelize = new Sequelize(
-    `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/trade`,
-    { logging: false, native: false }
+  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DATABASE}`,
+  { logging: false, native: false }
 );
 
 // Instances of models
@@ -25,14 +25,14 @@ const { Registro, Usuario } = sequelize.models;
 // Asumiendo que quieres una relación uno a muchos (un usuario puede tener varios registros)
 Usuario.hasMany(Registro, {
   foreignKey: "usuarioId",
-  as: "registros"
+  as: "registros",
 });
 Registro.belongsTo(Usuario, {
   foreignKey: "usuarioId",
-  as: "usuario"
+  as: "usuario",
 });
 
 module.exports = {
- ...sequelize.models,
+  ...sequelize.models,
   connection: sequelize,
 };
