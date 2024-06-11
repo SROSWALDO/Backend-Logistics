@@ -7,7 +7,7 @@ const RegistroModel = require("./models/Registro");
 const UsuarioModel = require("./models/Usuario");
 
 // Connection to SQL
-const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DATABASE } = process.env;
 
 const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DATABASE}`,
