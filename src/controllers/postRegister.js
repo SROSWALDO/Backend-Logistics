@@ -4,7 +4,7 @@ const generateEmailTemplate = require('../middlewares/emailTemplate')
 
 const postRegister = async (registerData) => {
     try {
-        const { usuarioId, origen, destino, cp_origen, cp_destino, direccion_origen, direccion_destino, estado_origen, estado_destino, unidad, peso, dimensiones, cantidad_skids, userEmail } = registerData;
+        const { usuarioId, origen, destino, cp_origen, cp_destino, direccion_origen, direccion_destino, estado_origen, estado_destino, unidad, peso, dimensiones, cantidad_skids, userEmail, type_of_requirement, hazmat, fecha_hora_origen, fecha_hora_destino  } = registerData;
 
         const origenAbreviado = origen.slice(0, 1).toUpperCase();
         const destinoAbreviado = destino.slice(0, 1).toUpperCase();
@@ -33,10 +33,14 @@ const postRegister = async (registerData) => {
             cp_origen,
             direccion_origen,
             estado_origen,
+            fecha_hora_origen,
             destino,
             cp_destino,
             direccion_destino,
             estado_destino,
+            fecha_hora_destino,
+            type_of_requirement,
+            hazmat,
             unidad,
             peso,
             dimensiones,
@@ -46,7 +50,7 @@ const postRegister = async (registerData) => {
 
         // Enviar correo después de crear el registro
         const remitente = userEmail;
-        const destinatario = 'eduardo_risk13@hotmail.com';
+        const destinatario = 'yaco2002@live.com.mx';
         const subject = 'Nuevo Registro Posteado';
         const html = generateEmailTemplate(registerData);
         sendEmail(remitente, destinatario, subject, html);

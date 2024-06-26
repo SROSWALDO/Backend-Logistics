@@ -60,6 +60,23 @@ module.exports = (sequelize) => {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        type_of_requirement: {
+            type: DataTypes.STRING,
+            allowNull: false, 
+        },
+        hazmat: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: 'No',
+        },
+        fecha_hora_origen: {
+            type: DataTypes.DATE,
+            allowNull: true,
+        },
+        fecha_hora_destino: {
+            type: DataTypes.DATE,
+            allowNull: true,
+        },
     });
 
     return Registro; 

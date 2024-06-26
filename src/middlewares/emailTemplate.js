@@ -91,9 +91,13 @@ const generateEmailTemplate = (data) => {
                     </div>
                     <div class="section">
                         <h2>Detalles del Envío</h2>
-                        <p><strong>Peso:</strong> ${data.peso} kg</p>
-                        <p><strong>Dimensiones:</strong> ${data.dimensiones}</p>
-                        <p><strong>Cantidad Skids:</strong> ${data.cantidad_skids}</p>
+                        <p><strong>Weight:</strong> ${data.peso} kg</p>
+                        <p><strong>Dimensions:</strong> ${data.dimensiones}</p>
+                        <p><strong>Quantity Skids:</strong> ${data.cantidad_skids}</p>
+                        <p><strong>Type of requirement:</strong> ${data.type_of_requirement}</p>
+                        <p><strong>Hazmat:</strong> ${data.hazmat}</p>
+                        <p><strong>Date and time of Origin:</strong> ${data.fecha_hora_origen}</p>
+                        <p><strong>Date and time of Destiny:</strong> ${data.fecha_hora_destino}</p>
                     </div>
                 </div>
                 <div class="footer">
