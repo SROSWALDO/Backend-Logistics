@@ -50,7 +50,7 @@ const postRegister = async (registerData) => {
 
         // Enviar correo después de crear el registro
         const remitente = userEmail;
-        const destinatario = 'yaco2002@live.com.mx';
+        const destinatario = 'eduardo_risk13@hotmail.com';
         const subject = 'Nuevo Registro Posteado';
         const html = generateEmailTemplate(registerData);
         sendEmail(remitente, destinatario, subject, html);
