@@ -75,7 +75,7 @@ module.exports = (sequelize) => {
         },
         clas: {
             type: DataTypes.STRING,
-            allowNull: false, 
+            allowNull: false,
         },
         fecha_hora_origen: {
             type: DataTypes.DATE,
