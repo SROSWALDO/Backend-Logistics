@@ -4,7 +4,7 @@ const generateEmailTemplate = require('../middlewares/emailTemplate')
 
 const postRegister = async (registerData) => {
     try {
-        const { usuarioId, origen, destino, cp_origen, cp_destino, direccion_origen, direccion_destino, estado_origen, estado_destino, unidad, peso, dimensiones, cantidad_skids, userEmail, type_of_requirement, hazmat, fecha_hora_origen, fecha_hora_destino  } = registerData;
+        const { usuarioId, origen, destino, cp_origen, cp_destino, direccion_origen, direccion_destino, estado_origen, estado_destino, unidad, peso, dimensiones, cantidad_skids, userEmail, type_of_requirement, hazmat, fecha_hora_origen, fecha_hora_destino, un, clas  } = registerData;
 
         const origenAbreviado = origen.slice(0, 1).toUpperCase();
         const destinoAbreviado = destino.slice(0, 1).toUpperCase();
@@ -46,6 +46,8 @@ const postRegister = async (registerData) => {
             dimensiones,
             cantidad_skids,
             usuarioId,
+            un,
+            clas
         });
 
         // Enviar correo después de crear el registro

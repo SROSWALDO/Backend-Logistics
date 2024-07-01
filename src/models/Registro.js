@@ -65,9 +65,17 @@ module.exports = (sequelize) => {
             allowNull: false, 
         },
         hazmat: {
-            type: DataTypes.STRING,
+            type: DataTypes.BOOLEAN,
             allowNull: false,
-            defaultValue: 'No',
+            defaultValue: false,
+        },
+        un: {
+            type: DataTypes.STRING,
+            allowNull: false, 
+        },
+        clas: {
+            type: DataTypes.STRING,
+            allowNull: false, 
         },
         fecha_hora_origen: {
             type: DataTypes.DATE,
