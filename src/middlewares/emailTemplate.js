@@ -68,36 +68,38 @@ const generateEmailTemplate = (data) => {
         <body>
             <div class="container">
                 <div class="header">
-                    <h1>Nuevo Registro</h1>
+                    <h1>Bill of Lading</h1>
                 </div>
                 <div class="content">
                     <div class="section">
-                        <h2>Detalles del Usuario</h2>
+                        <h2>User</h2>
                         <p><strong>Usuario:</strong> ${data.userName}</p>
+                        <p><strong>Usuario:</strong> ${data.userEmail}</p>
                     </div>
                     <div class="section">
-                        <h2>Detalles del Origen</h2>
-                        <p><strong>Origen:</strong> ${data.origen}</p>
-                        <p><strong>Código Postal Origen:</strong> ${data.cp_origen}</p>
-                        <p><strong>Dirección Origen:</strong> ${data.direccion_origen}</p>
-                        <p><strong>Estado Origen:</strong> ${data.estado_origen}</p>
+                        <h2>Pick Up</h2>
+                        <p><strong>Origin:</strong> ${data.origen}</p>
+                        <p><strong>CP:</strong> ${data.cp_origen}</p>
+                        <p><strong>Address:</strong> ${data.direccion_origen}</p>
+                        <p><strong>State:</strong> ${data.estado_origen}</p>
+                        <p><strong>Departure:</strong> ${fecha_hora_origen}</p>
                     </div>
                     <div class="section">
-                        <h2>Detalles del Destino</h2>
-                        <p><strong>Destino:</strong> ${data.destino}</p>
-                        <p><strong>Código Postal Destino:</strong> ${data.cp_destino}</p>
-                        <p><strong>Dirección Destino:</strong> ${data.direccion_destino}</p>
-                        <p><strong>Estado Destino:</strong> ${data.estado_destino}</p>
+                        <h2>Delivery</h2>
+                        <p><strong>Destiny:</strong> ${data.destino}</p>
+                        <p><strong>CP:</strong> ${data.cp_destino}</p>
+                        <p><strong>Address:</strong> ${data.direccion_destino}</p>
+                        <p><strong>State:</strong> ${data.estado_destino}</p>
                     </div>
                     <div class="section">
-                        <h2>Detalles del Envío</h2>
+                        <h2>Cuotes</h2>
                         <p><strong>Weight:</strong> ${data.peso} kg</p>
                         <p><strong>Dimensions:</strong> ${data.dimensiones}</p>
-                        <p><strong>Quantity Skids:</strong> ${data.cantidad_skids}</p>
+                        <p><strong>Skids:</strong> ${data.cantidad_skids}</p>
                         <p><strong>Type of requirement:</strong> ${data.type_of_requirement}</p>
-                        <p><strong>Hazmat:</strong> ${data.hazmat}</p>
-                        <p><strong>Date and time of Origin:</strong> ${data.fecha_hora_origen}</p>
-                        <p><strong>Date and time of Destiny:</strong> ${data.fecha_hora_destino}</p>
+                        <p><strong>Hazmat:</strong> ${data.un} ${data.clas} </p>
+                        <p><strong>Departure:</strong> ${data.fecha_hora_origen}</p>
+                        <p><strong>Arrival:</strong> ${data.fecha_hora_destino}</p>
                     </div>
                 </div>
                 <div class="footer">
