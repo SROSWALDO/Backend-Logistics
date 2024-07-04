@@ -82,7 +82,7 @@ const generateEmailTemplate = (data) => {
                         <p><strong>CP:</strong> ${data.cp_origen}</p>
                         <p><strong>Address:</strong> ${data.direccion_origen}</p>
                         <p><strong>State:</strong> ${data.estado_origen}</p>
-                        <p><strong>Departure:</strong> ${fecha_hora_origen}</p>
+                        <p><strong>Departure:</strong> ${data.fecha_hora_origen}</p>
                     </div>
                     <div class="section">
                         <h2>Delivery</h2>
